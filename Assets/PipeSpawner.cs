@@ -11,8 +11,9 @@ public class PipeSpawner : MonoBehaviour
     public GameObject Pipe3;
     public GameObject Pipe4;
     public GameObject Pipe5;
-    private float timeToSpawn = 2f;
+    private float timeToSpawn = 1f;
     public float timeBetweenWaves = 1f;
+    private int lastRandom = 1;
     // Start is called before the first frame update
     
 
@@ -22,11 +23,20 @@ public class PipeSpawner : MonoBehaviour
         if (Time.time >= timeToSpawn) {
             SpawnPipes();
             timeToSpawn = Time.time + timeBetweenWaves;
+            timeBetweenWaves -= 0.01f;
         }
     }
 
     void SpawnPipes() {
         int random = Random.Range(1, 6);
+        if (random == lastRandom) {
+            random += 2;
+            if (random > 5) {
+                random-=5;
+            }
+        }
+        lastRandom = random;
+        
 
         if (random == 1)
         {

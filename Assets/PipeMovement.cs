@@ -6,15 +6,13 @@ public class PipeMovement : MonoBehaviour
 {
 
     public Rigidbody2D rb;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float speed = -7f;
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(-7, 0);
+        speed = -7 - Time.time/20;
+        rb.velocity = new Vector2(speed, 0);
+
     }
 }
