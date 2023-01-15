@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8970ffe8eb879439fd351ca68c0b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartDelay: 10
 --- !u!4 &639120885
 Transform:
   m_ObjectHideFlags: 0
@@ -603,6 +604,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3833986811727730689, guid: 0c19652b92b8fa246abda28f2679982e, type: 3}
+      propertyPath: pMovement
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3833986811727730696, guid: 0c19652b92b8fa246abda28f2679982e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -935,4 +940,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2100883569}
-  p: {fileID: 1327565630}
+  currentScore: 0

@@ -7,17 +7,16 @@ using TMPro;
 public class Score : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
-    public PipeSpawner p;
-    private int currentScore = 0;
-    private float timeToSpawn = 4.429f;
+    public int currentScore = 0;
     
     // Update is called once per frame
     void Update()
     {
-        if (Time.time >= timeToSpawn) {
-            currentScore++;
-            timeToSpawn = Time.time + p.timeBetweenWaves;
-        }
         scoreText.SetText(currentScore.ToString());
     }
+
+    public void incrementScore() {
+        currentScore++;
+    }
 }
+

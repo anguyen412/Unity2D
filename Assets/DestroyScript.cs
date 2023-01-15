@@ -8,7 +8,7 @@ public class DestroyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -15f) {
+        if (transform.position.x < -20f) {
             Destroy(gameObject);
         }
     }
